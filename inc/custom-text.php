@@ -11,6 +11,7 @@ namespace Hessu_pdf_packing_slips_functionality;
  * 
  * @param string $type Document type
  * @param object $order WooCommerce order object
+ * @return void
  */
 function custom_text( $type, $order ) {
 
