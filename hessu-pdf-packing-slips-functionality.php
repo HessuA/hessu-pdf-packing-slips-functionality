@@ -14,7 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action( 'init', function() {
-  require_once plugin_dir_path( __FILE__ ) . '/inc/hooks.php';
-  require_once plugin_dir_path( __FILE__ ) . '/inc/custom-text.php';
-  require_once plugin_dir_path( __FILE__ ) . '/inc/change-address.php';
+
+  if ( class_exists( 'WPO_WCPDF' ) ) {
+    require_once plugin_dir_path( __FILE__ ) . '/inc/hooks.php';
+    require_once plugin_dir_path( __FILE__ ) . '/inc/custom-text.php';
+    require_once plugin_dir_path( __FILE__ ) . '/inc/change-address.php';
+  }
 } );
