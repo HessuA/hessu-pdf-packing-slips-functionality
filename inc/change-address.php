@@ -16,6 +16,7 @@ namespace Hessu_pdf_packing_slips_functionality;
 function check_type( $type, $order ) {
   if ( 'packing-slip' === $type ) {
     add_filter( 'wpo_wcpdf_shipping_address', __NAMESPACE__ . '\change_address' );
+    add_filter( 'wpo_wcpdf_billing_address', __NAMESPACE__ . '\change_address' );
   }
 }
 
